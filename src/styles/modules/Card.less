@@ -1,0 +1,84 @@
+@font-type: 'Lato', sans-serif;
+@font-size-main: 12px;
+@font-size-price: 13px;
+
+.price-btn() {
+  background: #ff2929;
+  color: #fff;
+  font-family: @font-type;
+  font-weight: bold;
+  font-size: @font-size-price;
+  padding: 10px;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  background: #fef5ca;
+  box-shadow: 2px 2px 6px #ccc;
+  margin-bottom: 10px;
+  &-imagecontainer {
+    padding: 10px 10px 0 10px;
+    position: relative;
+  }
+  &-image {
+    width: 100%;
+  }
+  &-body {
+    padding: 0;
+  }
+  &-text {
+    font-family: @font-type;
+    color: #333333;
+    margin-bottom: 15px;
+    font-size: @font-size-main;
+    padding: 10px;
+    & h3 {
+      margin-bottom: 10px;
+    }
+  }
+  &-footer {
+    height: 45px;
+    color: #aba897;
+    font-family: @font-type;
+    background: #f5ecc3;
+    font-size: @font-size-main;
+    & p {
+      padding: 10px;
+    }
+  }
+  &--clear {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 213px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background: #fff;
+    &-body {
+      padding: 0;
+    }
+    &-footer {
+      height: 45px;
+      color: #aba897;
+      font-family: @font-type;
+      background: #f7f7f7;
+      font-size: @font-size-main;
+    }
+    &-footer p {
+      padding: 10px;
+    }
+  }
+}
+.img-aux {
+  margin-top: -4px;
+}
+.price {
+  .price-btn();
+  float: right;
+  &-img {
+    .price-btn();
+    position: absolute;
+    right: 10px;
+  }
+}

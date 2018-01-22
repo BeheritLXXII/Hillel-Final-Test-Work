@@ -1,0 +1,67 @@
+@font-type: 'Lato', sans-serif;
+@font-size-main: 12px;
+
+.adaptive(@rules) {
+  @media all and (min-width: 320px) and (max-width: 480px) {
+    @rules();
+  }
+}
+
+.search {
+  height: 50px;
+  background: #dbdbdb;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  justify-content: space-between;
+  font-family: @font-type;
+  box-shadow: 0px 3px 3px #ccc;
+  &-city {
+    border: none;
+    width: 100px;
+    height: 29px;
+    background: #dbdbdb;
+    font-weight: bold;
+    font-size: @font-size-main;
+  }
+  &-bar {
+    width: 505px;
+    height: 25px;
+    border-radius: 4px;
+    color: #bababa;
+    padding-left: 15px;
+    margin-right: 5px;
+    .adaptive ({
+      width: 300px;
+      margin-right: 0;
+    })
+  }
+  &-rubric {
+    width: 200px;
+    height: 29px;
+    border-radius: 4px;
+    background: #fff;
+    color: #bababa;
+    padding-left: 15px;
+    margin-right: 3px;
+    .adaptive ({
+      width: 200px;
+      margin-right: 0;
+    })
+  }
+  &-btn {
+    width: 80px;
+    height: 29px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #333333;
+    background: #f8f8f8;
+  }
+  .adaptive ({
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 150px;
+      padding: 5px;
+  })
+}
